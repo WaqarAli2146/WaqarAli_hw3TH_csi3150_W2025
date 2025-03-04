@@ -1,0 +1,17 @@
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+li:first-child {
+    font-weight: bold;
+}
+
+p::first-letter {
+    font-size: 30px;
+    color: red;
+}
+
+h1::after {
+    content: ":)";
+}

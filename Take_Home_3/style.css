@@ -1,0 +1,214 @@
+body {
+    /* Sets the font, removes default margin/padding, centers text, and gives a black background */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #000000;
+}
+
+/* Hero Section */
+.hero h1 {
+    /* Makes the heading big, bold, uppercase, and adds a glowing shadow */
+    font-size: 70px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.7);
+    margin-bottom: 10px;
+}
+
+.hero {
+    /* Adds a background image, makes it fixed for a parallax effect, and centers content */
+    background: url('images/hero_bg.png') no-repeat center center/cover;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+/* Common Section Backgrounds */
+.bg-image {
+    /* Makes section backgrounds full width, centered, and with white text */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 100px 20px;
+    color: rgb(255, 255, 255);
+}
+
+#about h2 {
+    /* Makes the About section heading bold, uppercase, and easier to read with a shadow */
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    margin-bottom: 15px;
+}
+
+#about {
+    /* Sets the About section background and reduces height a bit */
+    background: url('images/about_bg.jpg') no-repeat center center/cover;
+    background-size: fill;
+    min-height: 9vh;
+    padding: 50px 20px;
+}
+
+#tours {
+    /* Adds a cool background to the Tours section */
+    background: url('images/tours_bg.jpg') no-repeat center center/cover;
+}
+
+/* Button */
+.btn {
+    /* Styles the button with an orange background and white text */
+    background: #ff9900;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* Tour Section */
+.tour-container {
+    /* Aligns the tour cards in a row and wraps if needed */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tour {
+    /* Gives the tour boxes a black background, some padding, a shadow, and hover effect */
+    background: rgb(0, 0, 0);
+    padding: 60px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 1900px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tour img {
+    /* Makes the images inside the tours round, centered, and keeps aspect ratio */
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+.tour h3 {
+    /* Adds some space around tour titles */
+    margin: 10px 0;
+}
+
+/* Hidden Dropdown Content */
+.tour-details {
+    /* Keeps tour details hidden until hovered over */
+    max-height: 0;
+    overflow: hidden;
+    background: #000000;
+    padding: 0 10px;
+    transition: max-height 0.5s ease-in-out;
+    font-size: 20px;
+}
+
+/* Expands tour details when hovered over */
+.tour:hover .tour-details {
+    max-height: 150px;
+    padding: 10px;
+}
+
+/* Image Carousel */
+.image-carousel {
+    /* Keeps images in a row and makes them scroll horizontally */
+    overflow: hidden;
+    white-space: nowrap;
+    width: 90%;
+    margin: auto;
+}
+
+.carousel-track {
+    /* Makes the images scroll continuously */
+    display: flex;
+    animation: scroll 20s linear infinite;
+}
+
+.carousel-track img {
+    /* Gives each image a fixed width and some rounded edges */
+    width: 50%;
+    min-width: 600px;
+    margin: 0 10px;
+    border-radius: 10px;
+}
+
+@keyframes scroll {
+    /* Moves the images to the left infinitely */
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Tour Guide Section */
+.tour-guide {
+    /* Puts the guide section in a row with background and padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: url('images/guide_bg.jpg') no-repeat center center/cover;
+    padding: 80px 20px;
+    color: white;
+}
+
+.tour-guide img {
+    /* Makes the tour guide image smaller and rounded */
+    width: 30%;
+    border-radius: 10px;
+}
+
+.guide-info {
+    /* Keeps the text aligned to the left with a smaller width */
+    width: 50%;
+    text-align: left;
+}
+
+/* Contact Section */
+.contact {
+    /* Adds padding, dark background, and white text for the contact section */
+    padding: 40px;
+    background: #222;
+    color: white;
+}
+
+form input, form textarea {
+    /* Makes the form fields full width with some spacing */
+    width: 80%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+button {
+    /* Styles the submit button with an orange background and white text */
+    background: #ff9900;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+}
+
+/* Social Media Icons */
+.social-icons a {
+    /* Styles the social media icons with white color and spacing */
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+    text-decoration: none;
+}
+
+/* Changes the heading color of eac

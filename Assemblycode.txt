@@ -1,0 +1,26 @@
+       INP      // Read first number (Multiplier)
+       STA A    // Store it in memory location A
+       INP      // Read second number (Multiplicand)
+       STA B    // Store it in memory location B
+       LDA ZERO // Load 0 into accumulator (initial sum)
+       STA RESULT // Store 0 in RESULT
+
+LOOP   LDA RESULT // Load current sum
+       ADD B      // Add B to sum
+       STA RESULT // Store updated sum
+       LDA A      // Load A (counter)
+       SUB ONE    // Subtract 1
+       STA A      // Store updated A
+       BRZ END    // If A is 0, finish
+       BRA LOOP   // Otherwise, repeat loop
+
+END    LDA RESULT // Load final result
+       OUT        // Output the result
+       HLT        // Stop program
+
+// Memory Addresses
+A       DAT 0
+B       DAT 0
+RESULT  DAT 0
+ZERO    DAT 0
+ONE     DAT 1
