@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Animal Reveal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 2rem;
+        }
+        button {
+            margin: 0.3rem;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+        }
+        .animal-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .animal {
+            display: inline-block;
+            text-align: center;
+        }
+        img {
+            max-width: 200px;
+            margin: 0.5rem;
+        }
+        .hide-btn {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to the Interactive Reveal What’s that Animal UI</h2>
+    <p>Click the buttons below each image to reveal or hide the animal</p>
+    <div class="animal-container">
+        <div class="animal">
+            <img id="cat" src="tabby-cat.jpg" alt="Cat">
+            <div>
+                <button onclick="showImage('cat')">Show CAT</button>
+                <button id="hide-cat" class="hide-btn" onclick="hideImage('cat')">Hide CAT</button>
+            </div>
+        </div>
+        <div class="animal">
+            <img id="dog" src="dog.jpg" alt="Dog">
+            <div>
+                <button onclick="showImage('dog')">Show DOG</button>
+                <button id="hide-dog" class="hide-btn" onclick="hideImage('dog')">Hide DOG</button>
+            </div>
+        </div>
+        <div class="animal">
+            <img id="cow" src="cow.jpg" alt="Cow">
+            <div>
+                <button onclick="showImage('cow')">Show COW</button>
+                <button id="hide-cow" class="hide-btn" onclick="hideImage('cow')">Hide COW</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showImage(animal) {
+            const img = document.getElementById(animal);
+            const hideBtn = document.getElementById(`hide-${animal}`);
+            img.style.display = 'block';
+            hideBtn.style.display = 'inline-block';
+        }
+
+        function hideImage(animal) {
+            const img = document.getElementById(animal);
+            const hideBtn = document.getElementById(`hide-${animal}`);
+            img.style.display = 'none';
+            hideBtn.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
